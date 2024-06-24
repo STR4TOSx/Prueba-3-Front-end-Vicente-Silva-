@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Agencia de Diseño</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #2c3e50;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white">Atelier</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Suscríbete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#administrador" id="boton-administrador">Administrador</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5 admin-ocultar">
+        <!-- Usamos d-flex y flex-column para las versiones móviles, y flex-xl-row para pantallas grandes (asignamos la maxima de 1920x1980 px) -->
+        <section id="inicio" class="mb-5 d-flex flex-column flex-xl-row align-items-center">
+            <img src="https://i.postimg.cc/pT0gxxwq/Mesa-de-trabajo-1.png" alt="Banner Principal" class="img-fluid w-50">
+            <div>
+                <h1>Somos Atelier</h1>
+                <p>Descubra el lugar donde la creatividad se une con la tecnología para transformar sus ideas en realidades impresionantes.</p>
+            </div>
+        </section>
+
+        <!-- homologamos la distribucion para el resto de los divs -->
+        <section id="servicios" class="mb-5 d-flex flex-column flex-xl-row align-items-center">
+            <img src="https://blog.uvm.mx/hubfs/dise%C3%B1o-digital-animaciones.jpg" alt="Nuestros Servicios" class="img-fluid w-50">
+            <div>
+                <h2>Nuestros Servicios</h2>
+                <p>En Atelier, cada cliente es una nueva historia de éxito en potencia. Ofrecemos una gama extensa de servicios diseñados para cubrir todas tus necesidades creativas y técnicas. Desde la creación de identidades de marca, desarrollo de sitios web, marketing digital, SEO y comercio electrónico, lo que nos permite proporcionar una solución integral que eleva tu presencia en el mercado.</p>
+            </div>
+        </section>
+
+        <section id="clientes" class="mb-5 d-flex flex-column flex-xl-row align-items-center">
+            <img src="https://estaticos.elmundo.es/assets/multimedia/imagenes/2016/11/17/14793877332737.jpg">
+            <div>
+                <h2>Nuestros clientes</h2>
+                <p>En Atelier, estamos orgullosos de haber colaborado con una amplia gama de clientes, desde startups innovadoras hasta grandes corporaciones multinacionales. Cada cliente es único, y nos esforzamos por entender profundamente sus necesidades y objetivos. Nuestra experiencia abarca diversos sectores, incluyendo tecnología, moda, educación y salud, lo que nos permite proporcionar soluciones creativas y técnicas adaptadas a cada industria.</p>
+        <p>Nuestro compromiso es impulsar el éxito de nuestros clientes a través de estrategias personalizadas que resaltan su visión y objetivos comerciales. Aquí, no solo hablamos de nuestros servicios, sino que demostramos cómo estos se han traducido en éxito tangible para nuestros clientes. Testimonios y estudios de caso detallados subrayan cómo hemos ayudado a transformar sus ideas en realidades impactantes y duraderas.</p>
+            </div>
+        </section>
+
+        <section id="portafolio" class="mb-5 d-flex flex-column flex-xl-row align-items-center">
+            <img src="https://www.atenascomunicacion.com/wp-content/uploads/2021/08/portfolio-deign.jpg" alt="Nuestro Portafolio" class="img-fluid w-50">
+            <div>
+                <h2>Portafolio</h2>
+                <p>Déjate inspirar por nuestro portafolio, que es un testimonio de nuestra habilidad para manejar una diversidad de estilos y desafíos. Cada proyecto aquí presentado muestra nuestro compromiso con la creatividad y la excelencia técnica. Desde campañas publicitarias que capturan la imaginación hasta desarrollos web que establecen nuevos estándares en la industria, nuestro trabajo habla por sí mismo. Estamos orgullosos de cada colaboración y proyecto que hemos emprendido y esperamos agregar tu historia a esta creciente galería de innovaciones.</p>
+            </div>
+        </section>
+    </div>
+        <!-- Formulario para suscribir a gente interesada en nuestro trabajo-->
+    <div class="suscripcion-container admin-ocultar mt-5 pt-5">
+            <!-- Sección de suscripción -->
+            <section id="contacto" class="mb-5 d-flex flex-column flex-xl-row align-items-center">
+                <form class="col-md-12 d-flex flex-column align-items-center">
+                    <h2>Suscríbete</h2>
+                    <h4>Recibe las últimas novedades respecto a nosotros</h4>
+                    <button type="button" id="toggle-form">Suscríbete</button>
+                </form>
+            </section>
+    </div>
+    <br>
+    <br>
+    <br>
+            <!-- Formulario de registro inicialmente oculto -->
+            <div id="formulario-registro" class="container mt-5 pt-5" style="display: none;">
+                <form>
+                    <h2>Registro de Usuario</h2>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br> <!-- Validación de campo "required" para evitar campos en blanco-->
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required min="18" max="100"><br><br> <!-- Validación de edad 18-100 años-->
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required><br><br> <!-- Validación a través del type "email" para que la direccion contenga "@" para validarlo"-->
+                    <label>Género:</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required> <!-- Validación de campo "required" para evitar campos en blanco-->
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="femenino" name="genero" value="femenino">
+                    <label for="femenino">Femenino</label><br><br>
+                    <label for="suscripcion">Suscribirse al boletín:</label><!-- campo en blanco / opcional -->
+                    <input type="checkbox" id="suscripcion" name="suscripcion"><br><br>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        
+            <!-- Área para mostrar usuarios registrados, oculta inicialmente -->
+            <div id="users-area" class="container mt-3" style="display: none;">
+                <!-- Aquí se añadirán dinámicamente los módulos de usuario -->
+            </div>
+   
+    <!-- Creamos un footer con información de contacto-->
+    <footer class="text-center p-4 bg-dark text-light" style="background-color: #2c3e50;">
+        <p>Contacto: contacto@atelieragencia.com</p>
+        <p>Creado por Vicente Silva</p>
+        <p>Pasaje Dalcahue 8961, Villa Santa Claudia, La Granja, Santiago, CHILE</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript de Bootstrap (con Bundle): Este es necesario para activar las funcionalidades interactivas de los componentes-->
+    <!-- (menús desplegables, modulos, tooltips, y otros efectos dinámicos), esto es distinto a las propiedades CSS de bootstrap declarado en el "href" en la parte de arriba-->
+    <script src="administrador.js"></script> <!-- Referencia al archivo JavaScript externo de control administrativo -->
+</body>
+</html>
